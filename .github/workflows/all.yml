@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
       - run: cp src/assets/config/config.ci.json src/assets/config/config.json
       - run: npm run test
-      - run: npm run sonar -- -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }} -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }} -Dsonar.projectVersion=${{ github.run_number }}
+      - run: npm run sonar -- -Dsonar.host.url=${{ secrets.SONARQUBE_HOST }} -Dsonar.login=${{ secrets.SONARQUBE_TOKEN }} -Dsonar.projectVersion=${{ github.run_number }} -Dsonar.projectKey=${{ github.event.repository.name }}
       - uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
