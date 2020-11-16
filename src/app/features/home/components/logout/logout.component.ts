@@ -5,8 +5,7 @@ import { WebRtcProvider } from "@proofmeid/webrtc-web";
 
 @Component({
     selector: "app-logout",
-    templateUrl: "logout.component.html",
-    styleUrls: ["logout.component.scss"]
+    templateUrl: "logout.component.html"
 })
 export class LogoutComponent implements OnInit {
 

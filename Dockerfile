@@ -1,7 +1,7 @@
 FROM nginx:mainline-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY dist/customer-portal  /usr/share/nginx/html
+COPY dist/boilerplate-frontend  /usr/share/nginx/html
 
 # Copy the Entrypoint
 COPY ./entrypoint.sh /
