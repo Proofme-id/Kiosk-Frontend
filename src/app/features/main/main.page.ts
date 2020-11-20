@@ -53,11 +53,18 @@ export class MainPageComponent extends BaseComponent implements OnInit {
             this.toastrService.error("Email not send!");
         });
     }
-
+    navigateToAccess(): void {
+        this.router.navigate(["access"]);
+    }
+    navigateToPos(): void {
+        this.router.navigate(["pos"]);
+    }
+    navigateToIdentification(): void {
+        this.router.navigate(["identification"]);
+    }
     navigateToTerms(): void {
         this.router.navigate(["terms"]);
     }
-
     navigateToPrivacy(): void {
         this.router.navigate(["privacy"]);
     }

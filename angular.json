@@ -34,7 +34,7 @@
               { "input": "./src/theme/panel.scss" },
               "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts":  [ "./node_modules/face-api.js/dist/face-api.min.js" ]
           },
           "configurations": {
             "production": {

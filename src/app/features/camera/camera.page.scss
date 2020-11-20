@@ -1,0 +1,83 @@
+.camera-interface {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    --ion-background-color: black;
+    background-color: black;
+
+    div {
+        text-align: center;
+        width: 33%;
+        font-size: 40px;
+    }
+}
+
+ion-content {
+    --background: transparent;
+}
+
+ion-icon {
+    color: white;
+}
+
+.camera-interface-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.loading-div {
+    background: white;
+    pointer-events: none;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-div-inner {
+    padding: 20px 20px 22px 20px;
+    background: black;
+    border-radius: 25px;
+    display: flex;
+}
+
+.error-div-inner {
+    padding: 20px 20px 22px 20px;
+    background: black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-div-inner-buttons {
+    display: flex;
+    margin-top: 16px;
+}
+
+.error-text {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.loading-text {
+    font-size: 20px;
+    margin-top: 4px;
+    margin-right: 10px;
+    color: white;
+}
+
+.spinner {
+    transform: scale(1.5);
+    color: white;
+}
+
+html, body, .ion-app, .ion-content {
+    background-color: transparent;
+}

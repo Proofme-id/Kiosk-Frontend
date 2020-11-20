@@ -37,6 +37,18 @@ const routes: Routes = [
         loadChildren: "./features/test_faq/faq.module#FaqPageModule"
     },
     {
+        path: "access",
+        loadChildren: "./features/access/access.module#AccessPageModule"
+    },
+    {
+        path: "pos",
+        loadChildren: "./features/pos/pos.module#PosPageModule"
+    },
+    {
+        path: "identification",
+        loadChildren: "./features/identification/identification.module#IdentificationPageModule"
+    },
+    {
         path: "home",
         loadChildren: "./features/home/home.module#HomePageModule",
         canActivate: [HasJwtTokenDefinedGuard]

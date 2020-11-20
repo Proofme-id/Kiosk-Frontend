@@ -1,0 +1,120 @@
+.fullscreen {
+  display: block;
+  position:absolute;
+  height:auto;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
+  margin-top:90px;
+  background-color: black;
+}
+.PayButton{
+  margin-top: -3px;
+  border: none;
+  background: #e98517;
+  padding: 8px 15px;
+  border-radius: 5px;
+  float: right;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+video {
+  width:100%; height:100%;
+  object-fit: cover;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 8%;
+  background: lighten(#222629, 5%);
+}
+.container {
+  width: 450px;
+  margin: 0 auto;
+  margin-left: 2% !important;
+}  
+.product-card {
+  margin-top: 20px;
+  background: #222629;
+  color: white;
+  padding: 15px;
+  border-radius: 7px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  box-shadow: 0px 0px 5px 1px darken(#222629, 11%);
+
+  div {
+    flex: 1 1 0%;
+    align-self: stretch;
+  }
+  .image {
+    background: #222629;
+    position: relative;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .card-content {
+    padding: 10px 20px;
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: darken(white, 20%);
+    }
+    p {
+      margin: 15px 0px;
+      color: #868686;
+    }
+    .store-purchase {
+      display: flex;
+      flex-direction: row;
+
+      .price {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 0.4rem;
+        color: darken(white, 8%);
+      }
+      button {
+        border: none;
+        background: darken(#ed9d45, 10%);
+        padding: 8px 15px;
+        border-radius: 5px;
+        float: right;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.5s ease;
+
+        &:hover {
+          background: #ed9d45;
+        }
+      }
+    }
+  }
+}
+.Total {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-top: 20px;
+  width: 250px;
+  height: 524px;
+  background: #222629;
+  color: white;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 1px darken(#222629, 11%);
+
+}

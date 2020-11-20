@@ -1,0 +1,38 @@
+<ion-content>
+    <div class="loading-div" *ngIf="!cameraOpen">
+        <div class="loading-div-inner" *ngIf="error === -1">
+            <ion-label class="loading-text" *ngIf="!checkingVectors">{{ 'CAMERA.loading' | translate }}</ion-label>
+            <ion-label class="loading-text" *ngIf="checkingVectors">{{ 'CAMERA.processing' | translate }}</ion-label>
+            <ion-spinner name="bubbles" class="spinner"></ion-spinner>
+        </div>
+        <div class="error-div-inner" *ngIf="error !== -1">
+            <ion-label class="error-text" *ngIf="error === 0">{{ 'CAMERA.something_went_wrong' | translate }}</ion-label>
+            <ion-label class="error-text" *ngIf="error === 1">{{ 'CAMERA.no_face_found' | translate }}</ion-label>
+            <div class="error-div-inner-buttons">
+                <smilo-button color="danger" expand="full" class="padding" (action)="cancel()">
+                    <ion-label>
+                        {{ 'CAMERA.cancel' | translate }}
+                    </ion-label>
+                </smilo-button>
+                <smilo-button color="success" expand="full" class="padding" (action)="retry()">
+                    <ion-label>
+                        {{ 'CAMERA.retry' | translate }}
+                    </ion-label>
+                </smilo-button>
+            </div>
+        </div>
+    </div>
+    <div class="camera-interface-container">
+        <div class="camera-interface">
+            <div>
+                <ion-icon name="arrow-back" (click)="backButton()"></ion-icon>
+            </div>
+            <div>
+                <ion-icon name="camera" (click)="takePicture()"></ion-icon>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</ion-content>

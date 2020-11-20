@@ -1,58 +1,7 @@
 <app-main-header></app-main-header>
-<div class="main-view-div">
-    <div class="container">
-        <div class="main-title">
-            <h1>{{ 'MAIN.title' | translate }}</h1>
-        </div>
-        <div class="main-text">
-            <h5> {{ 'MAIN.subtitle' | translate }}</h5>
-        </div>
-
-        <section class="section-1">
-
-            <h2>{{ 'MAIN.title2' | translate }}</h2>
-            <h5>{{ 'MAIN.subtitle2' | translate }}</h5>
-
-        </section>
-    </div>
+<div class="fullscreen">
+        <button class="hw" (click)="navigateToAccess()">Acces Management</button>
+        <button class="hw" (click)="navigateToPos()">Point of service</button>
+        <button class="hw" (click)="navigateToIdentification()">Identification</button>
+        <button class="hw">Test</button>
 </div>
-
-
-<!-- contact-section start -->
-<section id="contact" class="contact-section">
-
-    <div class="container card">
-        <div class="contact-wrapper">
-            <div class="section-header text-center mb--50">
-                <h3>{{ 'index.contact.title' | translate}}</h3>
-                <h6>{{ 'index.contact.subtitle' | translate}} <em
-                        class="fa fa-heart"></em>{{ 'index.contact.subtitle2' | translate}}</h6>
-            </div>
-            <div class="contact">
-                <form [formGroup]=contactForm class="contact-form" *ngIf="!contactEmail">
-                    <div class="row">
-                        <div class="col-lg-6 mb-lg-0 margin-top-50">
-                            <input type="hidden" name="receiver" id="receiver" value="didux">
-                            <input type="text" formControlName="name" class="border-radius" name="name" id="name"
-                                placeholder="{{ 'index.contact.name' | translate}}">
-                            <input type="email"  formControlName="email" class="border-radius" name="email" email="true" id="emailaddress"
-                                placeholder="{{ 'index.contact.email' | translate}}">
-                        </div>
-                        <div class="col-lg-6">
-                            <textarea id="message" formControlName="message" class="border-radius"
-                                placeholder="{{ 'index.contact.message' | translate}}"></textarea>
-                        </div>
-                        <div class="col-12 text-center pt--50 send-email-button">
-                            <button type="button" (click)="sendEmail();" [disabled]="!contactForm.valid" class="contact-button">
-                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                {{ 'index.contact.send' | translate}}
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- contact-section end -->
-<app-footer></app-footer>

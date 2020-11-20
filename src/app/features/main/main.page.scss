@@ -2,30 +2,6 @@
     .container {
         padding-top: calc(88px + 5vh);
     }
-    h3{
-        font-size: 1.875em;
-        color: var(--title-color);
-        font-weight: 700;
-        font-family: "Roboto", sans-serif;
-        line-height: 1.5;  
-    }
-    h6{
-        font-size: 19px;
-        margin: 0 0 1.6em;
-        color: var(--subtext-color);
-        line-height: 1.75;
-        font-family: "Roboto", sans-serif;
-        font-weight: 600;
-    }
-    p{
-        font-size: 15px;
-        margin: 0 0 1.6em;
-        color: var(--white);
-        line-height: 1.75;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-    }
-
     .login-header {
         height: 80px;
         width: 100%;
@@ -55,97 +31,64 @@
         background-size: cover;
         height: 100vh;
         width: 100%;
-        overflow: hidden;
         color: var(--white);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .section-1 {
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .contact-wrapper {
-            opacity: 1.0;
-            background-image: url(/assets/img/contact-background.jpg);
-            background-repeat: no-repeat;
-            background-position: center center;
-            margin-bottom: 5px;
-    }
-
-    .contact-form {
-        max-width: 930px;
-        width: 100%;
-        margin: auto;
-        input, textarea {
-            width: 100%;
-            padding: 12px 25px;
-            border: 1px solid var(--lightGrey);
-            box-shadow: 0 0 15px 0 rgba(var(--black), 0.06);
-            outline: none;
-            &:active,&:hover,&:focus {
-                border-color: var(--base-color);
-            }
-        }
-        input {
-            margin-bottom: 50px;
-            font-size: 14px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        textarea {
-            font-size: 14px;
-            height: 100%;
-        }
-        
-        button {
-            padding: 15px 60px;
-            font-size: 14px;
-            background-color: var(--base-color);
-            border: none;
-            color: var(--white);
-            &:enabled {
-                &:hover {
-                    color:  var(--white);
-                    background-color: var(--title-color);
-                }
-            }
-        }
-    }
-
-    .border-radius {
-        border-radius: 5px;
-    }
-
-    .margin-top-50 {
-        margin-bottom: 50px;
-    }
-
-    .send-email-button {
-        border-radius: 5px; margin-top:50px
-    }
-
-    .contact-button {
-        border-radius: 5px;
-
-        &:disabled {
-            opacity: 0.5;
-
-            background: red;
-        }
-    }
-
-    .card {
-        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1); 
-        padding: 30px;
-        margin-bottom: 5vh;
-        margin-top: 5vh;
-        border-radius: 10px;
     }
 }
+.box {
+    background-color: #3C8DBC;
+    color: #fff;
+    text-align: center;
+}
 
+.hw{
+    width: 47%;
+    height:48%;
+    margin-left: 2%;
+    margin-top: 2%;
+    background-color: #686869;
+    color: #fff;
+    text-align: center;
+}
+
+// .mt{
+//     margin-top: 125px;
+// }
+
+// .mb12{
+//     margin-bottom: 2%;
+// }
+
+// .mb34{
+//     margin-bottom: 5%;
+// }
+
+.fullscreen {
+    display: block;
+    position:absolute;
+    height:auto;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin-top:90px;
+    background-color: black;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.6) 0, rgba(92, 77, 66, 0.6) 100%), url(/assets/img/background.jpg) no-repeat;
+    background-size: cover;
+  }
+  input{
+    border: black 2px solid;
+    width: 35px;
+    height: 25px;
+    text-align: center;
+  }
+  
+  img{
+    height:50px;
+    width: 50px;
+  }
+  
+  .description{
+    position:relative;
+    left: 70px;
+    bottom: 50px;
+  }

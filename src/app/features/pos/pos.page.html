@@ -1,0 +1,109 @@
+<app-main-header></app-main-header>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<div class="fullscreen">
+    <div class="container">
+        <div class="product-card">
+            <div class="image">
+                <img src="/assets/img/BroodjeZalm.jpg" alt="">
+            </div>
+            <div class="card-content">
+                <h3>Broodje zalm</h3>
+                <p>Zalm met sla</p>
+                <div class="store-purchase">
+                    <div class="price">€3,50</div>
+                    <div class="buy">
+                        <button (click)="addProductToReceipt(1, 'Zalm', 3.50)">Kopen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image">
+                <img src="/assets/img/BroodjeKaas.jpg" alt="">
+            </div>
+            <div class="card-content">
+                <h3>Broodje Kaas</h3>
+                <p>Kaas en boter</p>
+                <div class="store-purchase">
+                    <div class="price">€2,00</div>
+                    <div class="buy">
+                        <button (click)="addProductToReceipt(1, 'Kaas', 2)">Kopen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image">
+                <img src="/assets/img/BroodjeZalm.jpg" alt="">
+            </div>
+            <div class="card-content">
+                <h3>Broodje zalm</h3>
+                <p>Zalm met sla</p>
+                <div class="store-purchase">
+                    <div class="price">€3,50</div>
+                    <div class="buy">
+                        <button (click)="addProductToReceipt(1, 'Test', 200)">Kopen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image">
+                <img src="/assets/img/BroodjeKaas.jpg" alt="">
+            </div>
+            <div class="card-content">
+                <h3>Broodje Kaas</h3>
+                <p>Kaas en boter</p>
+                <div class="store-purchase">
+                    <div class="price">€2,00</div>
+                    <div class="buy">
+                        <button>Kopen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image">
+                <video id="video" autoplay="true" playsinline="true"></video>
+            </div>
+            <div class="card-content">
+                <h5>Scan uw product</h5>
+            </div>
+        </div>
+
+        <!-- <div class="product-card">
+            <div class="card-content">
+
+                <div class="store-purchase">
+                    <div *ngFor="let product of receipt.products">
+                        {{ product.name }}
+                    </div>
+                    <div class="price">Totaal:</div>
+                    <div class="price">€ {{ receipt.price }}</div>
+                    <div class="buy">
+                        <button>Betaal</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="Total">
+            <h5>Receipt:</h5>
+            <div *ngFor="let product of receipt.products">
+                {{ product.name }}
+            </div>
+            <div class="price">
+                <h6>Price: € {{ receipt.price.toFixed(2) }},-<button class="PayButton">Betaal</button></h6>
+            </div>
+            <div>{{ receipt.amount }}</div>
+        </div>
+    </div>
+</div>
+

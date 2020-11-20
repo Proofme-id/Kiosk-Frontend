@@ -13,27 +13,7 @@
 					<p class="nav-link active" (click)="navigateToLogin()">
 						{{ 'HEADER.login' | translate }}</p>
 				</li>
-				<li class="nav-item">
-					<p class="nav-link" (click)="navigateToRegistrate()">
-						{{ 'HEADER.registrate' | translate }}</p>
-				</li>
 
-				<li class="nav-item dropdown">
-					<p class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-						(click)="toggleAccountDropdown()" (click)="isLanguageCollapsed = true"
-						data-toggle="dropdown">
-						{{ 'HEADER.account' | translate }}</p>
-					<div [ngbCollapse]="isAccountCollapsed" class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<p class="dropdown-item" (click)="navigateToLogin()">
-							{{ 'HEADER.login' | translate }}</p>
-						<p class="dropdown-item" (click)="navigateToRegistrate()">
-							{{ 'HEADER.registrate' | translate }}</p>
-						<p class="dropdown-item" (click)="navigateToLogin()">
-							{{ 'HEADER.myaccount' | translate }}</p>
-						<div class="dropdown-divider"></div>
-						<p class="dropdown-item" (click)="navigateToMainPage()">{{ 'HEADER.logout' | translate }}</p>
-					</div>
-				</li>
 				<li class="nav-item dropdown">
 					<p class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
 						(click)="toggleLanguageDropdown()" (click)="isAccountCollapsed = true"
