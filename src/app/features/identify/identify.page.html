@@ -7,10 +7,10 @@
             </div>
             <div class="logo fixed-width" id="qrCode" [hidden]="connectionSuccess || identifySuccess">
                 <canvas #qrCodeCanvas></canvas>
-                <p>Scan this QR code with the<br/><b>ProofMe.ID App</b></p>
+                <p>Scan this QR code with the<br/><strong>ProofMe.ID App</strong></p>
             </div>
             <div class="logo fixed-width mobile-button-div" [hidden]="connectionSuccess">
-                <p>Click here to identify with the<br/><b>ProofMe.ID App</b></p>
+                <p>Click here to identify with the<br/><strong>ProofMe.ID App</strong></p>
                 <a [href]="mobileLoginUrl | safeUrl" class="btn btn-success mobile-button">Identify</a>
             </div>
 
@@ -43,8 +43,8 @@
                                 <div class="level center-id">
                                     {{ identity['OLDER_THAN_18'].issuer.authorityName }}
                                 </div>
-                                <img src="/assets/img/male.png" class="idimg center-id" *ngIf="identity['GENDER'].credentialSubject.credential.value == 'MALE'">
-                                <img src="/assets/img/female.png" class="idimg center-id" *ngIf="identity['GENDER'].credentialSubject.credential.value == 'FEMALE'">
+                                <img src="/assets/img/male.png" alt="logo" class="idimg center-id" *ngIf="identity['GENDER'].credentialSubject.credential.value == 'MALE'">
+                                <img src="/assets/img/female.png" alt="logo" class="idimg center-id" *ngIf="identity['GENDER'].credentialSubject.credential.value == 'FEMALE'">
                                 <div class="points center-id">
                                     {{ identity['GENDER'].credentialSubject.credential.value }}
                                 </div>

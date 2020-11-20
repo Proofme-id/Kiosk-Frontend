@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content class="ion-content">
     <div class="loading-div" *ngIf="!cameraOpen">
         <div class="loading-div-inner" *ngIf="error === -1">
             <ion-label class="loading-text" *ngIf="!checkingVectors">{{ 'CAMERA.loading' | translate }}</ion-label>
@@ -25,7 +25,7 @@
     <div class="camera-interface-container">
         <div class="camera-interface">
             <div>
-                <ion-icon name="arrow-back" (click)="backButton()"></ion-icon>
+                <ion-icon class="ion-icon" name="arrow-back" (click)="backButton()"></ion-icon>
             </div>
             <div>
                 <ion-icon name="camera" (click)="takePicture()"></ion-icon>
